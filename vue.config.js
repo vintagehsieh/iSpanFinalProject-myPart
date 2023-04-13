@@ -1,0 +1,70 @@
+const { defineConfig } = require("@vue/cli-service");
+module.exports = defineConfig({
+  transpileDependencies: true,
+  publicPath: "./",
+  outputDir: "dist",
+  // assertDir: "",
+  indexPath: "index.html",
+  pages: {
+    shop: {
+      entry: "src/pages/shop/shop.js",
+      template: "public/shop.html",
+      filename: "shop.html",
+      title: "Shop",
+      chunks: ["chunk-vendors", "chunk-common", "shop"],
+    },
+    activity: {
+      entry: "src/pages/activity/activity.js",
+      template: "public/activity.html",
+      filename: "activity.html",
+      title: "Activity",
+      chunks: ["chunk-vendors", "chunk-common", "activity"],
+    },
+    member: {
+      entry: "src/pages/member/member.js",
+      template: "public/member.html",
+      filename: "member.html",
+      title: "Member",
+      chunks: ["chunk-vendors", "chunk-common", "member"],
+    },
+    login: {
+      entry: "src/pages/login/login.js",
+      template: "public/login.html",
+      filename: "login.html",
+      title: "Login",
+      chunks: ["chunk-vendors", "chunk-common", "login"],
+    },
+    register: {
+      entry: "src/pages/register/register.js",
+      template: "public/register.html",
+      filename: "register.html",
+      title: "Register",
+      chunks: ["chunk-vendors", "chunk-common", "register"],
+    },
+    reset: {
+      entry: "src/pages/reset/reset.js",
+      template: "public/reset.html",
+      filename: "reset.html",
+      title: "Reset",
+      chunks: ["chunk-vendors", "chunk-common", "reset"],
+    },
+    resetPassword: {
+      entry: "src/pages/resetPassword/resetPassword.js",
+      template: "public/resetPassword.html",
+      filename: "resetPassword.html",
+      title: "ResetPassword",
+      chunks: ["chunk-vendors", "chunk-common", "resetPassword"],
+    },
+    index: {
+      entry: "src/main.js",
+      template: "public/index.html",
+      filename: "index.html",
+      title: "iSMusic",
+      chunks: ["chunk-vendors", "chunk-common", "index"],
+    },
+  },
+  // devServer: {
+  //   port: "8080",
+  //   https: true,
+  // },
+});
